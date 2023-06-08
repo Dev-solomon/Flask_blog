@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <h2>{{ blog_title }}</h2>
-    <a href="/posts/new/{{ blog_id }}"><button class="btn btn-primary">New post</button></a>
+    <h2 class="text-center fst-italic mt-2">{{ blog_title }}</h2>
+    <!-- <a href="/posts/new/{{ blog_id }}"><button class="btn btn-primary">New post</button></a>
     {% if posts|length > 0 %}
         {% for post in posts %}
             <h3>{{ post.title }}</h3>
@@ -12,6 +12,7 @@
         {% endfor %}
     {% else %}
         <h4>There aren't any posts yet!</h4>
-    {% endif %}
+    {% endif %} -->
+    <p class="text-center font-monospace">{{ blog_mssg }}</p>
 </div>
 {% endblock %}

@@ -88,7 +88,7 @@ def blog_posts(blog_id):
     blog = Blog.from_mongo(blog_id)
     posts = blog.get_posts()
 
-    return render_template('posts.html', posts=posts, blog_title=blog.title, blog_id=blog._id)
+    return render_template('posts.html', posts=posts, blog_title=blog.title, blog_id=blog._id, blog_mssg=blog.description)
 
 
 @app.route('/posts/new/<string:blog_id>', methods=['POST', 'GET'])

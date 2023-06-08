@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <h2>{{ email }}'s blogs</h2>
-    {% for blog in blogs %}
-        <h3><a href="/posts/{{ blog._id }}">{{ blog.title }}</a></h3>
-        <p>{{ blog.description }}</p>
-        <hr>
-    {% endfor %}
+<h2 class="text-center text-dark font-monospace"><u><b>This is {{ email }}'s BlogPosts</b></u></h2>
+
+<div class="col-10 container-fluid mt-1" style="border: 1px solid grey; border-radius: 5px;">
+
+{% for blog in blogs %}
+<h3><a href="/posts/{{ blog._id }}" style="text-decoration: none;">{{ blog.title }}</a></h3>
+<hr>
+{% endfor %}
 </div>
+
 {% endblock %}
