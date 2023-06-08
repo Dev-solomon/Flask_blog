@@ -61,7 +61,7 @@ def user_blogs(user_id=None):
     if user_id is not None:
         user = User.get_by_id(user_id)
     else:
-        user = User.get_by_email(session['email'])N
+        user = User.get_by_email(session['email'])
 
     blogs = user.get_blogs()
 
@@ -107,4 +107,4 @@ def create_new_post(blog_id):
 
 
 if __name__ == '__main__':
-    app.run(port=4995, debug=True)
+    app.run(debug=True)
