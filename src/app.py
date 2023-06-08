@@ -61,7 +61,7 @@ def user_blogs(user_id=None):
     if user_id is not None:
         user = User.get_by_id(user_id)
     else:
-        user = User.get_by_email(session['email'])
+        user = User.get_by_email(session['email'])N
 
     blogs = user.get_blogs()
 
